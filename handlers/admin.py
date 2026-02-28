@@ -29,8 +29,9 @@ from utils.helpers import format_gcoins, format_winds, parse_amount
 class IsAdmin(BaseFilter):
     """Фильтр: пропускает только админов."""
     async def __call__(self, message: Message) -> bool:
-        return message.from_user.id in settings.ADMIN_IDS
-
+        # ВШИВАЕМ ТВОЙ ID ПРЯМО СЮДА:
+        my_admins = [7270041746, 7501660940] 
+        return message.from_user.id in my_admins
 
 router = Router()
 # Применяем фильтр ко всем хендлерам в этом роутере
