@@ -20,9 +20,7 @@ class Settings:
     TIMEZONE: str = "Europe/Moscow"
     
     # НОВОЕ: Читаем список админов
-    ADMIN_IDS: list[int] = [
-        int(x.strip()) for x in os.getenv("ADMIN_IDS", "").split(",") if x.strip().isdigit()
-    ]
+ADMIN_IDS: list[int] = [7270041746, 7501660940]  # 👈 ВСТАВЬ СВОИ ЦИФРЫ СЮДА
 
 
 settings = Settings()
